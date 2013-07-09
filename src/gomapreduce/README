@@ -1,0 +1,21 @@
+GoMapReduce is a mapreduce computing framework in go.
+
+Checkout into your workspace:
+
+    cd $HOME/yourgohome/src
+    git clone git@github.com:Cofyc/gomapreduce.git
+
+Build/Install GoMR package:
+
+    cd $HOME/yourgohome
+    go build/install gomapreduce
+
+Test package:
+
+    go test gomapreduce
+
+Test example cmds:
+
+    cd $HOME/yourgohome
+    go install gomapreduce/example/wc
+    ./bin/wc

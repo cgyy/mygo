@@ -1,0 +1,6 @@
+package main;
+
+message Request {
+    required int32 type = 1;
+    required string body = 2;
+}

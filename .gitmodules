@@ -1,0 +1,3 @@
+[submodule "src/gomemcached"]
+	path = src/gomemcached
+	url = git@github.com:Cofyc/gomemcached.git
