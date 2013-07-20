@@ -1,3 +1,4 @@
 bin/*
-src/*
+src/code.google.com
+src/gomemcached
 pkg/*
