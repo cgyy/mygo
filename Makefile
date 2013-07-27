@@ -1,7 +1,7 @@
 
-all: pwgen gomemcached
+all: mypw gomemcached
 
-pwgen:
+mypw:
 	go install $@
 
 gomemcached:
