@@ -16,9 +16,11 @@ func main() {
     for i :=0; true; i++ {
         conn, e := net.Dial("tcp", fmt.Sprintf("%s:%d", *host, *port))
         if e != nil {
+            fmt.Printf("\n")
             log.Fatal(e)
+            break
         }
-        if i % 10 {
+        if i % 100 == 0 {
             fmt.Printf("\r%d", i)
         }
         conns = append(conns, conn)
