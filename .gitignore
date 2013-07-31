@@ -2,3 +2,4 @@ bin/*
 src/code.google.com
 src/gomemcached
 pkg/*
+src/github.com
