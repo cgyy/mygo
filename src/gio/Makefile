@@ -1,14 +1,6 @@
 
-all: gio gioc
+all:
+	go build
 
-gio: $(wildcard *.go) message.pb.go
-	go install gio
-
-gioc: $(wildcard gioc/*.go) message.pb.go
-	go install gio/gioc
-
-%.pb.go: %.proto
-	protoc --go_out=. $<
-
-test: gio
+test: all
 	gio

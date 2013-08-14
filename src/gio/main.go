@@ -3,12 +3,8 @@ package main
 import (
     "flag"
     "log"
-    //"fmt"
     "syscall"
     "os"
-    //"sort"
-    //"io"
-    //"code.google.com/p/goprotobuf/proto"
     "gio/routes"
     "time"
     "gio/functions"
