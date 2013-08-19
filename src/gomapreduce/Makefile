@@ -1,2 +1,3 @@
-fmt:
-	gofmt -l -w -tabs=false  -tabwidth=4 -s .
+
+wc:
+	go build gomapreduce/example/wc

@@ -1,8 +1,6 @@
 package gomapreduce
 
 import (
-    //    "fmt"
-    //    "os"
     "runtime"
     "sync"
 )
