@@ -6,14 +6,14 @@
 package main
 
 import (
+	"encoding/base64"
 	"flag"
-	"html/template"
 	"fmt"
+	gc "github.com/golang/groupcache"
+	"html/template"
+	"io/ioutil"
 	"log"
 	"net/http"
-	"io/ioutil"
-	gc "github.com/golang/groupcache"
-	"encoding/base64"
 )
 
 var addr = flag.String("addr", ":1718", "http service address")
@@ -45,7 +45,8 @@ func main() {
 			return nil
 		}))
 
-	go http.ListenAndServe("localhost:" + *port, peers)
+	// run groupcache process in goroutine
+	go http.ListenAndServe("localhost:"+*port, peers)
 
 	http.Handle("/", http.HandlerFunc(QR))
 	err := http.ListenAndServe(*addr, nil)
