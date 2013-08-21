@@ -37,14 +37,14 @@ func mypw(length int) string {
 func main() {
 	var length = 20
 	var num int = 1
-    for i := 0; i < len(os.Args); i++ {
-        switch os.Args[i] {
-        case "-h", "--help":
-            fmt.Printf("Usage: mypw [length=%d] [num=%d]\n", length, num)
-            fmt.Println()
-		    os.Exit(0)
-        }
-    }
+	for i := 0; i < len(os.Args); i++ {
+		switch os.Args[i] {
+		case "-h", "--help":
+			fmt.Printf("Usage: mypw [length=%d] [num=%d]\n", length, num)
+			fmt.Println()
+			os.Exit(0)
+		}
+	}
 	if len(os.Args) > 1 {
 		_num, err := strconv.Atoi(os.Args[1])
 		if err == nil {
